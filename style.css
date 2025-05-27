@@ -5,6 +5,10 @@ body {
 }
 
 
+body {
+  position: relative;
+  z-index: 0;
+}
 
 h1 {
     font-family: "Space Grotesk", sans-serif;
@@ -347,6 +351,16 @@ a:visited {
     outline: #E94560 solid 1px;
     border-radius: 24px;
     padding: 3px 10px;
+}
+
+#gradientCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* Responsive Styles */
