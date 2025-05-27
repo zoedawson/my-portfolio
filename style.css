@@ -1,0 +1,435 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+
+
+h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+}
+
+body {
+    background-color: #FFF1EB;
+    color: #2E294E;
+    font-family: karla, sans-serif;
+    margin: 0;
+}
+
+header {
+    color: #E94560;
+    padding: 2vw 10vw 0vw;
+    font-weight: 500;
+}
+
+footer {
+    padding: 2vw 1vw 1vw;
+
+    & li {
+        padding-left: 30px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 1px solid #E94560;
+}
+
+#splash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 200px;
+    height: calc(100vh - 70px);
+    box-sizing: border-box;
+}
+
+.aboutmetxt {
+    flex: 1;
+    max-width: 350px;
+    position: relative;
+}
+
+.aboutmetxt h1 {
+    font-size: 4rem;
+    margin: -20px 0;
+}
+
+.aboutmetxt h2 {
+    font-family: "The Girl Next Door", cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #2E294E;
+    margin: 20px 0;
+}
+
+.aboutmetxt p {
+    padding-top: 40px;
+}
+
+.portrait img {
+    border-radius: 24px;
+    outline: 2px solid #8D6EC8;
+    height: 60vh;
+    width: 40vh;
+    object-fit: cover;
+    box-shadow: 0 0 20px 5px #8d6ec89f;
+}
+
+.projects {
+    background-color: #C0E218;
+    color: #2E294E;
+    padding: 40px 10%;
+}
+
+.projects section {
+    margin-bottom: 30px;
+}
+
+.projects ul {
+    gap: 1rem;
+}
+
+.projects h3 {
+    text-align: center;
+}
+
+#projecttitle {
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.projects section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    outline: #180d1b solid 1px;
+    padding: 1px 20px;
+    justify-content: space-between;
+}
+
+.projects section ul {
+    display: flex;
+    list-style: none;
+    gap: 0.8rem;
+    padding: 0;
+}
+
+.projects section ul li {
+    outline: #2E294E solid 1px;
+    border-radius: 24px;
+    padding: 3px 10px;
+    white-space: nowrap;
+}
+
+
+.projects section:hover {
+    background-color: #2E294E;
+    color: #C0E218;
+    cursor: pointer;
+}
+
+/* Overlay hidden by default */
+.preview-overlay {
+    position: absolute;
+    top: -170%;
+    right: 10%;
+    width: 600px;
+    height: 350px;
+    background-color: rgba(46, 41, 78, 0.9);
+    /* semi-transparent dark overlay */
+    border: 2px solid #C0E218;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(192, 226, 24, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    /* so it doesn’t block mouse */
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+    z-index: 100;
+    /* above everything inside the section */
+}
+
+/* Show overlay on hover */
+.projects section:hover .preview-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Image fills the overlay */
+.preview-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#txtoutline {
+    color: #2E294E;
+    text-shadow: -1px -1px 0 #E94560, 1px -1px 0 #E94560, -1px 1px 0 #E94560, 1px 1px 0 #E94560;
+}
+
+.purplecolor {
+    color: #8D6EC8;
+}
+
+.corner-img {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-100%, -50%);
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translate(60%, 60%);
+}
+
+.headline-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.underline {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+a:link {
+  color: #2E294E;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2E294E;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #E94560;
+    font-family: 'Space Grotesk', sans-serif;
+    z-index: 2;
+}
+
+.scroll-down .arrow {
+    font-size: 1rem;
+    animation: bounce 2s infinite;
+    display: block;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+.aboutme {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 10% 20%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.aboutme-text,
+.aboutme-image {
+    width: 50%;
+}
+
+.aboutme-image {
+    margin-right: -10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.aboutme-image img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    padding-right: 10%;
+}
+
+.pinktxt {
+    color: #E94560;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 0;
+    list-style: none;
+}
+
+.skills li {
+    white-space: nowrap;
+    outline: #E94560 solid 1px;
+    border-radius: 24px;
+    padding: 3px 10px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    #splash {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 5%;
+        height: auto;
+    }
+
+    .aboutmetxt {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .aboutmetxt h1 {
+        font-size: 3rem;
+    }
+
+    .aboutmetxt h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .aboutmetxt p {
+        padding-top: 20px;
+    }
+
+    .portrait img {
+        width: 70vw;
+        height: auto;
+        max-height: 50vh;
+        border-radius: 16px;
+        outline-width: 1.5px;
+    }
+
+    .scroll-down {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 1rem;
+    }
+
+    #projects {
+        padding: 40px 5%;
+    }
+
+    #projects section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+    }
+
+    #projects section ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .aboutme {
+        flex-direction: column;
+        padding: 2rem 5%;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .aboutme-text,
+    .aboutme-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .aboutme-image {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .aboutme-image img {
+        width: 90%;
+        padding: 0;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .corner-img {
+        display: none;
+    }
+
+    .headline-wrapper img {
+        display: none;
+    }
+
+}
