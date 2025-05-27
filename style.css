@@ -62,6 +62,17 @@ ul {
     padding: 0;
 }
 
+.navbar a {
+    color: #E94560;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: #FFF1EB;
+    background-color: #E94560;
+    padding: 10px;
+}
+
 hr {
     border: 1px solid #E94560;
 }
