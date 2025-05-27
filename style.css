@@ -36,9 +36,7 @@ header {
 footer {
     padding: 2vw 1vw 1vw;
 
-    & li {
-        padding-left: 30px;
-    }
+
 }
 
 nav {
@@ -66,12 +64,17 @@ ul {
     padding: 0;
 }
 
-.navbar a {
+a {
     color: #E94560;
     padding: 10px;
+    text-decoration: none;
 }
 
-.navbar a:hover {
+a:visited {
+    color: #E94560;
+}
+
+a:hover {
     color: #FFF1EB;
     background-color: #E94560;
     padding: 10px;
@@ -252,15 +255,6 @@ hr {
     z-index: 0;
 }
 
-
-a:link {
-  color: #2E294E;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #2E294E;
-}
 
 
 @keyframes float {
