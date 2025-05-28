@@ -80,6 +80,15 @@ a:hover {
     padding: 10px;
 }
 
+.projects a {
+    color: #2E294E;
+}
+
+.projects a:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 hr {
     border: 1px solid #E94560;
 }
@@ -187,17 +196,14 @@ hr {
     width: 600px;
     height: 350px;
     background-color: rgba(46, 41, 78, 0.9);
-    /* semi-transparent dark overlay */
     border: 2px solid #C0E218;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(192, 226, 24, 0.7);
     opacity: 0;
     pointer-events: none;
-    /* so it doesn’t block mouse */
     transition: opacity 0.3s ease;
     overflow: hidden;
     z-index: 100;
-    /* above everything inside the section */
 }
 
 /* Show overlay on hover */
