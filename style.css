@@ -774,6 +774,9 @@ footer hr {
         transition: all 0.3s linear;
     }
 
+    .headline-wrapper h2{
+        padding-bottom: 15px;
+    }
 
     .aboutmetxt {
         max-width: 100%;
