@@ -1,46 +1,81 @@
-const gradientLayer = document.createElement("div");
-gradientLayer.style.position = "fixed";
-gradientLayer.style.top = 0;
-gradientLayer.style.left = 0;
-gradientLayer.style.width = "100vw";
-gradientLayer.style.height = "100vh";
-gradientLayer.style.zIndex = "-9999";
-gradientLayer.style.pointerEvents = "none";
-gradientLayer.style.overflow = "hidden";
-document.body.appendChild(gradientLayer);
+const canvas = document.getElementById("lavaLampCanvas");
+const ctx = canvas.getContext("2d");
 
-const gradient = document.createElement("div");
-gradient.style.position = "absolute";
-gradient.style.width = "600px"; // larger for softer edges
-gradient.style.height = "600px";
-gradient.style.background = "radial-gradient(circle, #9B5DE5 0%, transparent 80%)";
-gradient.style.borderRadius = "50%";
-gradient.style.opacity = "0.4";
-gradient.style.filter = "blur(80px)";
-gradient.style.transform = "translate(-50%, -50%)";
-gradientLayer.appendChild(gradient);
+let width, height;
 
-// Mouse position tracking
-let targetX = 0;
-let targetY = 0;
-let currentX = 0;
-let currentY = 0;
+// Resize canvas to full screen
+function resize() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
 
-document.addEventListener("mousemove", (e) => {
-  targetX = e.clientX;
-  targetY = e.clientY;
-});
+// Pastel colors
+const colors = ['#C3B8F7', '#E9F78F', '#F7A3B3'];
 
-// Animate
+// Create blobs
+const blobs = [];
+const blobCount = 12;
+
+for (let i = 0; i < blobCount; i++) {
+  blobs.push({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    r: 220 + Math.random() * 180,
+    dx: (Math.random() - 0.5) * 0.6,
+    dy: (Math.random() - 0.5) * 0.6,
+    color: colors[i % colors.length]
+  });
+}
+
+// Converts hex color to rgba string
+function hexWithAlpha(hex, alpha) {
+  const c = hex.replace("#", "");
+  const bigint = parseInt(c, 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+// Draw all blobs
+function drawBlobs() {
+  ctx.clearRect(0, 0, width, height);
+  ctx.globalCompositeOperation = "screen"; // Soft light blending
+
+  blobs.forEach(blob => {
+    const gradient = ctx.createRadialGradient(blob.x, blob.y, 0, blob.x, blob.y, blob.r);
+    gradient.addColorStop(0, hexWithAlpha(blob.color, 0.4));   // center
+    gradient.addColorStop(0.5, hexWithAlpha(blob.color, 0.15));
+    gradient.addColorStop(1, hexWithAlpha(blob.color, 0));     // edges
+
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(blob.x, blob.y, blob.r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  ctx.globalCompositeOperation = "source-over"; // Reset mode
+}
+
+// Update positions of blobs
+function updateBlobs() {
+  blobs.forEach(blob => {
+    blob.x += blob.dx;
+    blob.y += blob.dy;
+
+    // Bounce off edges
+    if (blob.x < -blob.r || blob.x > width + blob.r) blob.dx *= -1;
+    if (blob.y < -blob.r || blob.y > height + blob.r) blob.dy *= -1;
+  });
+}
+
+// Animation loop
 function animate() {
-  // Easing toward target
-  const ease = 0.1;
-  currentX += (targetX - currentX) * ease;
-  currentY += (targetY - currentY) * ease;
-
-  gradient.style.left = `${currentX}px`;
-  gradient.style.top = `${currentY}px`;
-
+  updateBlobs();
+  drawBlobs();
   requestAnimationFrame(animate);
 }
+
 animate();
