@@ -56,7 +56,14 @@ a:hover {
     background: none;
     text-decoration: none;
     color: #E94560;
-    /* keep text color consistent */
+}
+
+.project-nav nav ul.navbar a {
+    color: #FFF1EB;
+}
+
+.project-nav nav ul.navbar a:hover {
+    color: #E94560;
 }
 
 /* Header */
@@ -104,7 +111,7 @@ hr {
 }
 
 .navbar a:hover {
-    color: #B83B53;
+    color: #FFF1EB;
 }
 
 /* Footer */
@@ -816,6 +823,10 @@ hr {
     }
 
     .navbar a:hover {
+        color: #E94560;
+    }
+
+    .project-nav nav ul.navbar a {
         color: #E94560;
     }
 
