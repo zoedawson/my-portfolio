@@ -46,8 +46,8 @@ function drawBlobs() {
 
   blobs.forEach(blob => {
     const gradient = ctx.createRadialGradient(blob.x, blob.y, 0, blob.x, blob.y, blob.r);
-    gradient.addColorStop(0, hexWithAlpha(blob.color, 0.4));   // center
-    gradient.addColorStop(0.5, hexWithAlpha(blob.color, 0.15));
+    gradient.addColorStop(0, hexWithAlpha(blob.color, 0.8));   // stronger center alpha
+    gradient.addColorStop(0.5, hexWithAlpha(blob.color, 0.45)); // stronger middle alpha
     gradient.addColorStop(1, hexWithAlpha(blob.color, 0));     // edges
 
     ctx.fillStyle = gradient;
@@ -59,15 +59,29 @@ function drawBlobs() {
   ctx.globalCompositeOperation = "source-over"; // Reset mode
 }
 
-// Update positions of blobs
+// Update positions of blobs (no mouse effect)
 function updateBlobs() {
   blobs.forEach(blob => {
     blob.x += blob.dx;
     blob.y += blob.dy;
 
-    // Bounce off edges
-    if (blob.x < -blob.r || blob.x > width + blob.r) blob.dx *= -1;
-    if (blob.y < -blob.r || blob.y > height + blob.r) blob.dy *= -1;
+    // Bounce off edges with some damping
+    if (blob.x < -blob.r) {
+      blob.x = -blob.r;
+      blob.dx *= -0.8;
+    }
+    if (blob.x > width + blob.r) {
+      blob.x = width + blob.r;
+      blob.dx *= -0.8;
+    }
+    if (blob.y < -blob.r) {
+      blob.y = -blob.r;
+      blob.dy *= -0.8;
+    }
+    if (blob.y > height + blob.r) {
+      blob.y = height + blob.r;
+      blob.dy *= -0.8;
+    }
   });
 }
 
