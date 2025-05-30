@@ -25,12 +25,19 @@
             <div class="site-name">
                 <a href="index.html">Click With Zoe</a>
             </div>
+
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <ul class="navbar">
-                <li><a href="#">Work</a></li>
+                <li><a href="#projects">My Work</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/zoe-dawson01/">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
@@ -38,32 +45,41 @@
     <hr />
 
     <section id="splash">
-        <div class="aboutmetxt">
-            <img src="images/stars.png" alt="Top Left Icon" class="corner-img top-left" />
+        <div class="splash-content">
+            <div class="aboutmetxt">
+                <img src="images/stars.png" alt="Scribbled Star" width="120" height="120" class="corner-img top-left" />
 
-            <div class="headline-wrapper">
-                <h2>MEET THE DESIGNER</h2>
-                <img src="images/underline.png" alt="Underline" class="underline" />
+                <div class="headline-wrapper">
+                    <h2>MEET THE DESIGNER</h2>
+                    <img src="images/underline.png" alt="Underline" class="underline" />
+                </div>
+
+                <h1 class="purplecolor">ZOE</h1>
+                <h1>DAWSON</h1>
+                <p>
+                    I'm an interactive designer fuelled by curiosity and a passion for learning. I'm always on the
+                    lookout
+                    for fresh perspectives and fun ways to bring ideas to life.
+                </p>
             </div>
 
+            <div class="portrait">
+                <img src="images/portrait.png" alt="Portrait photo of Zoe Dawson" />
+            </div>
+        </div>
 
-            <h1 class="purplecolor">ZOE</h1>
-            <h1>DAWSON</h1>
-            <p>
-                I'm an interactive designer fuelled by curiosity and a passion for learning. I'm always on the lookout
-                for fresh perspectives and fun ways to bring ideas to life.
-            </p>
-        </div>
-        <div class="portrait">
-            <img src="images/portrait.png" alt="Portrait" />
-        </div>
-        <div class="scroll-down">
-            <span class="arrow">&#x25BC;</span>
-            <p>Projects</p>
-        </div>
+        <a href="#projects" class="bouncy-arrow">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="#E94560" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>Projects</span>
+        </a>
     </section>
 
-    <section class="projects">
+
+
+    <section class="projects" id="projects">
         <h3 class="projecttitle">Projects</h3>
         <a href="themys.html">
             <section>
@@ -153,8 +169,8 @@
         <nav class="footer-nav">
             <p>© 2025 Zoe Dawson. All rights reserved.</p>
             <ul class="footer-links">
-                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/zoe-dawson01/">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
     </footer>
