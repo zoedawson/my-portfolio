@@ -620,6 +620,7 @@ hr {
 /* Footer Variant */
 .pink-footer {
   background: linear-gradient(to right, #E94560 0%, #FFF1EB 80%);
+  outline: #E94560 solid 1px;
 }
 
 .pink-footer p {
