@@ -44,6 +44,21 @@ a:hover {
     background-color: #E94560;
 }
 
+.projectarrow {
+    background: none;
+    text-decoration: none;
+    color: #E94560;
+}
+
+.projectarrow:hover,
+.projectarrow:focus,
+.projectarrow:active {
+    background: none;
+    text-decoration: none;
+    color: #E94560;
+    /* keep text color consistent */
+}
+
 /* Header */
 header {
     color: #E94560;
@@ -114,12 +129,6 @@ hr {
 }
 
 /* Footer */
-footer hr {
-    margin: 0 10%;
-    border: none;
-    border-top: 1px solid #E94560;
-}
-
 .footer-nav {
     display: flex;
     justify-content: space-between;
@@ -143,13 +152,44 @@ footer hr {
 
 .footer-links li a {
     text-decoration: none;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
     color: #E94560;
-    padding: 5px 10px;
 }
 
 .footer-links li a:hover {
-    color: #FFF1EB;
+    background-color: rgba(0, 0, 0, 0.0);
 }
+
+
+.social-link:hover img {
+  transform: scale(1.2); 
+}
+
+/* Desktop */
+@media (min-width: 600px) {
+    .footer-nav {
+        flex-wrap: nowrap;
+        text-align: left;
+        gap: 0;
+    }
+
+    .footer-nav p {
+        flex: none;
+        /* reset flex */
+        text-align: left;
+        /* left align text */
+    }
+
+    .footer-links {
+        flex: none;
+        /* reset flex */
+        justify-content: flex-end;
+        /* push links right */
+    }
+}
+
 
 /* Home Page */
 #splash {
@@ -579,20 +619,11 @@ footer hr {
 
 /* Footer Variant */
 .pink-footer {
-    background-color: #E94560;
+  background: linear-gradient(to right, #E94560 0%, #FFF1EB 80%);
 }
 
 .pink-footer p {
     color: #FFF1EB;
-}
-
-.pink-footer ul a {
-    color: #FFF1EB;
-}
-
-.pink-footer ul a:hover {
-    color: #E94560;
-    background-color: #FFF1EB;
 }
 
 /* Lists */
@@ -726,8 +757,8 @@ footer hr {
     }
 
     .splash-content {
-    gap: 30px;
-}
+        gap: 30px;
+    }
 
     nav {
         height: 60px;
@@ -774,7 +805,7 @@ footer hr {
         transition: all 0.3s linear;
     }
 
-    .headline-wrapper h2{
+    .headline-wrapper h2 {
         padding-bottom: 15px;
     }
 
@@ -934,4 +965,18 @@ footer hr {
         padding: 30px 0;
     }
 
+    .footer-nav {
+        flex-wrap: nowrap;
+        text-align: left;
+        gap: 0;
+    }
+
+    .footer-nav p,
+    .footer-links {
+        flex: unset;
+    }
+
+    .footer-links {
+        justify-content: flex-end;
+    }
 }
