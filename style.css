@@ -494,14 +494,14 @@ hr {
 }
 
 /* Canvas */
-#gradientCanvas {
+#lavaLampCanvas {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: block;
 }
 
 /* Project Pages */
@@ -723,15 +723,6 @@ hr {
     margin: 4px 0;
 }
 
-#lavaLampCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    display: block;
-}
 
 /* Responsive Styles */
 
@@ -747,20 +738,22 @@ hr {
         gap: 30px;
     }
 
+    header {
+        padding: 0;
+    }
+
     .hamburger {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        position: fixed;
-        top: 1.5rem;
-        right: 3rem;
         width: 30px;
         height: 25px;
         background: transparent;
         border: none;
         cursor: pointer;
         padding: 0;
-        z-index: 1100;
+        position: relative;
+        z-index: 1300;
     }
 
     .hamburger span {
@@ -769,13 +762,14 @@ hr {
         background-color: #E94560;
         border-radius: 2px;
         transition: all 0.3s ease;
+        transform-origin: center;
     }
 
-    .project-page .hamburger span {
-        background-color: #FFF1EB;
+    .project-nav .hamburger span {
+        background-color: white;
     }
 
-    .project-page .hamburger.active span {
+    .project-nav .hamburger.active span {
         background-color: #E94560;
     }
 
@@ -792,28 +786,50 @@ hr {
     }
 
     nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         height: 60px;
+        padding: 0 3rem;
+        position: relative;
     }
 
     .navbar {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.95);
-        color: #222;
-        /* dark text */
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        display: none;
+        flex-direction: column;
         padding: 5rem 2rem;
         gap: 2rem;
         overflow-y: auto;
-        z-index: 1000;
+        z-index: 1200;
     }
 
     .navbar.active {
         display: flex;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1150;
+    }
+
+
+    .menu-overlay.active {
+        display: block;
+        opacity: 1;
     }
 
     .navbar a {
