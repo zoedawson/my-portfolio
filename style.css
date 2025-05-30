@@ -413,6 +413,10 @@ hr {
 
 /* Project Styles */
 
+.page-padding {
+    padding: 0 10%;
+}
+
 .project-nav {
     background-color: #E94560;
     color: #FFF1EB;
@@ -450,6 +454,34 @@ hr {
     outline: #E94560 solid 1px;
     border-radius: 24px;
     padding: 3px 10px;
+}
+
+.project-overview {
+    text-align: center;
+}
+
+.overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    width: 33.33%;
+    text-align: left;
+    background-color: #fff;
+    color: #E94560;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(233, 69, 96, 0.2), 0 6px 20px 0 rgba(233, 69, 96, 0.2);
+}
+
+.problem-solution {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    text-align: left;
 }
 
 /* Responsive Styles */
@@ -546,4 +578,28 @@ hr {
         display: none;
     }
 
+    .problem-solution {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .overview {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .page-padding {
+        padding: 0 20px;
+    }
+
+    .container {
+        margin: 0px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cover p{
+        width: 100%;
+    }
 }
