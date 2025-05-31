@@ -79,11 +79,16 @@ nav {
     align-items: center;
 }
 
-.site-name a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #E94560;
+.image-hover {
+    width: 200px;
+    height: 30px;
+    background-image: url('Images/logo.png');
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.image-hover:hover {
+    background-image: url('Images/logo-hover.png');
 }
 
 .navbar {
@@ -1044,11 +1049,15 @@ div.container {
     }
 
     .portrait img {
-        width: 70vw;
+        width: 85vw;
         height: auto;
         max-height: 50vh;
         border-radius: 16px;
         outline-width: 1.5px;
+    }
+
+    .splash-content {
+        padding-bottom: 30%;
     }
 
     .scroll-down {
@@ -1237,12 +1246,12 @@ div.container {
         padding-top: 20px;
     }
 
-        .mobile-design-row {
+    .mobile-design-row {
         flex-direction: column;
     }
 
     .mobile-design-row .photo-block,
-    .mobile-design-row > div {
+    .mobile-design-row>div {
         max-width: 100%;
         width: 100%;
     }
@@ -1257,6 +1266,10 @@ div.container {
         width: 100%;
         height: auto;
         object-fit: contain;
+    }
+
+    a.projectarrow.bouncy-arrow {
+        display: none;
     }
 
 }
