@@ -1227,4 +1227,26 @@ div.container {
         padding-top: 20px;
     }
 
+        .mobile-design-row {
+        flex-direction: column;
+    }
+
+    .mobile-design-row .photo-block,
+    .mobile-design-row > div {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .photo-container.mobile-design-matched,
+    .photo-container.mobile-design-matched.natural-width {
+        width: 100%;
+    }
+
+    .photo-container.mobile-design-matched img,
+    .photo-container.mobile-design-matched.natural-width img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
 }
