@@ -90,6 +90,9 @@ nav {
 .image-hover:hover {
     background-image: url('Images/logo-hover.png');
 }
+.mainnav a:hover{
+    background-color: rgba(0, 0, 0, 0.0);
+}
 
 .navbar {
     display: flex;
