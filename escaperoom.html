@@ -4,15 +4,255 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gradient Follow Mouse Effect</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Zoe Dawson Portfolio</title>
+
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&family=The+Girl+Next+Door&display=swap"
         rel="stylesheet" />
+
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/gxm3bcb.css" />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-    Hello, this is the Escape Room page. Here you can add content related to Escape Room.
+<body class="project-page">
+
+    <script src="hamburger.js"></script>
+    <script src="slideshow.js"></script>
+
+
+    <header class="project-nav project-style">
+        <nav>
+            <div class="site-name">
+                <a href="index.html">Click With Zoe</a>
+            </div>
+
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar">
+                <li><a href="index.html#projects">My Work</a></li>
+                <li><a href="index.html#aboutme">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay"></div>
+
+    </header>
+
+
+    <section class="cover">
+        <p><span class="outline"><b>UX/UI Case Study</b></span><span class="outline"><b>Group Project</b></span></p>
+        <h2>Putapaiarehe - Escape Room</h2>
+        <p><b>An interactive escape room experience designed to educate rangatahi about the benefits and potential of 5G
+                technology, developed in partnership with Spark.</b></p>
+    </section>
+
+    <section class="page-padding">
+        <section>
+            <h3 class="center-text">Project Overview</h3>
+            <div class="boxes">
+                <div class="container"><b>My Role</b><br>UI design, UX design, Prototyping, Experimental Design
+                </div>
+                <div class="container"><b>Tools</b><br>Figma, Touchdesigner</div>
+                <div class="container"><b>Timeline</b><br>8 Weeks</div>
+            </div>
+            <div>
+                <div class="container full-width"><b>Group Members</b><br>
+                    <b>Aaron Lee</b> (Motion Designer), <b>Max Tillick</b> (Graphic Designer), <br>
+                    <b>Xania van Loggerenberg</b> (Interactive Designer), <b>Zoe Dawson</b> (Interactive Designer)
+                </div>
+            </div>
+            <div class="problem-solution">
+                <div>
+                    <h3>The Problem</h3>
+                    <p>Many rangatahi in Māori communities continue to feel the effects of post-COVID isolation,
+                        experiencing loneliness and difficulty socialising. At the same time, they remain disconnected
+                        from the opportunities that emerging technologies like 5G can offer, with few experiences
+                        designed to reflect their culture or spark meaningful engagement.</p>
+                </div>
+                <div>
+                    <h3>The Solution</h3>
+                    <p>We designed an interactive, projection-mapped escape room inspired by the Māori myths of the
+                        Patupaiarehe to foster collaboration and cultural pride. Through immersive storytelling and
+                        hands-on technology, the experience encourages social reconnection while introducing rangatahi
+                        to the creative possibilities of 5G.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section class="slideshow-section">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="Images/themys-image-1.png" alt="Slide 1">
+                </div>
+                <div class="slide fade">
+                    <img src="Images/themys-image-2.png" alt="Slide 2">
+                </div>
+                <div class="slide fade">
+                    <img src="Images/themys-image-3.png" alt="Slide 3">
+                </div>
+                <div class="slide fade">
+                    <img src="Images/themys-image-4.png" alt="Slide 4">
+                </div>
+                <div class="slide fade">
+                    <img src="Images/themys-image-5.png" alt="Slide 5">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+        </section>
+        <hr>
+
+
+        <section class="research">
+            <h3 class="center-text">Research and Insights</h3>
+            <div class="overview">
+                <div class="text-list">
+                    <h3>Key Findings</h3>
+                    <ul>
+                        <li>Rangatahi face isolation, loneliness, and social awkwardness from COVID-19</li>
+                        <li>5G technology enables ultra-fast, low-latency connectivity that powers immersive
+                            experiences, real-time collaboration</li>
+                    </ul>
+                </div>
+                <div class="photo-container">
+                    <img src="Images/eroom-persona.png" alt="">
+                    <p>Primary user persona: Maia, 16, Rangatahi looking at career options</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section>
+            <h3 class="center-text">Software Experimentation</h3>
+            <div>
+                <div>
+                    <div class="photo-container full-image">
+                        <img src="Images/eroom-experiement.png" alt="Full size image">
+                    </div>
+                    <p class="smaller-p">To understand what we could create, I spent time experimenting with new
+                        software. Once I became
+                        familiar with how nodes interact and which data inputs were important, I was able to test how
+                        hand movement detection could trigger a visual response such as fading out the fire by adjusting
+                        its opacity when a hand entered a certain quadrant of the illustration.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section>
+            <h3 class="center-text">Interaction Outcome</h3>
+            <div>
+                <div>
+                    <div class="photo-container full-image">
+                        <video class="rounded-video" width="100%" height="max-height" autoplay muted loop controls>
+                            <source src="Images/eroom-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="smaller-p">The final outcome is to show a working prototype on how interactions could
+                        look. Using what I learned on TouchDesigner I was able to create a prototype of one of our first
+                        scenes. For this scene the user would hover over the fire with a selected water bucket. They
+                        would then hover their hand over the fire to activate the water putting out the fire, this would
+                        trigger the next stage. The below shows how the fire turns off by a hovering movement.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section class="branding">
+            <h3 class="center-text">Web Design - Mobile</h3>
+            <p class="smaller-p">
+                We needed a booking system to manage team registrations for the escape room experience. I began by
+                designing mobile wireframes and created a lo-fi prototype to test the usability of the booking flow.
+                Once the initial design was validated, I handed it off to a team member to develop the web version
+                and code the final website.
+            </p>
+
+            <!-- Full-width image -->
+            <div class="photo-container full-image mobile-design-full">
+                <img src="Images/eroom-lofi.png" alt="Full size image">
+                <p>Lo-Fi prototype developments</p>
+            </div>
+
+            <!-- Matched height image row -->
+            <div class="matched-photo-row mobile-design-row">
+                <div>
+                    <div class="photo-container mobile-design-matched natural-width">
+                        <img src="Images/eroom-hifi1.png" alt="">
+                        <p>Initial concept sketches focusing on core user flows</p>
+                    </div>
+
+                </div>
+                <div class="photo-block">
+                    <div class="photo-container mobile-design-matched">
+                        <img src="Images/eroom-hifi2.png" alt="">
+                        <p>Refined designs with final visual hierarchy and interactions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
+        <section>
+            <h3 class="center-text">Reflections & Learnings</h3>
+            <div class="problem-solution">
+                    <div class="text-list">
+                        <h3>What I learned</h3>
+                        <ul>
+                            <li>Learned how to integrate TouchDesigner with MediaPipe to track hand movements and trigger visual effects.</li>
+                            <li>Gained experience designing for mobile-first booking flows, from lo-fi wireframes to final UI.</li>
+                            <li>Improved collaborative skills by handing off validated designs for web development within a team setting.</li>
+                        </ul>
+                    </div>
+                <div class="text-list">
+                    <h3>What Could Improve</h3>
+                    <ul>
+                        <li>The interaction outcome could be developed further to look and feel closer to the final product, rather than a prototype.</li>
+                        <li>Incorporate user feedback earlier in the design cycle to validate usability across a wider group of rangatahi.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <footer>
+        <nav class="footer-nav pink-footer">
+            <p>© 2025 Zoe Dawson. All rights reserved.</p>
+            <ul class="footer-links">
+                <li>
+                    <a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank"
+                        rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="32"
+                            height="32" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="LinkedIn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="32"
+                            height="32" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="gradient.js"></script>
 </body>
+
+</html>

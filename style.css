@@ -315,6 +315,7 @@ hr {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background: white;
+    border: #FFF1EB solid 5px;
     padding: 5px;
     z-index: 10;
 }
@@ -562,6 +563,11 @@ hr {
     margin: 20px 0;
 }
 
+.cover p .outline {
+    margin-right: 1rem;
+    display: inline-block;
+}
+
 .outline {
     color: #E94560;
     outline: #E94560 solid 1px;
@@ -591,6 +597,10 @@ hr {
     padding: 50px 0;
 }
 
+div.boxes {
+    padding-bottom: 30px;
+}
+
 .research .overview,
 .branding .overview {
     gap: 8rem;
@@ -608,6 +618,11 @@ hr {
     box-shadow: 0 4px 8px rgba(233, 69, 96, 0.2), 0 6px 20px rgba(233, 69, 96, 0.2);
 }
 
+div.container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .problem-solution {
     display: flex;
     flex-direction: row;
@@ -617,6 +632,20 @@ hr {
 
 .problem-solution>div {
     width: 50%;
+}
+
+.smaller-p {
+    max-width: 80%;
+    padding-top: 20px;
+}
+
+.rounded-video {
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Footer Variant */
@@ -631,6 +660,7 @@ hr {
 
 /* Lists */
 .text-list {
+    max-width: 550px;
     list-style: circle;
 }
 
@@ -661,6 +691,11 @@ hr {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.photo-container.full-image img {
+    max-width: none;
+    max-height: none;
 }
 
 .photo-container p {
@@ -702,6 +737,63 @@ hr {
     border-radius: 8px;
 }
 
+/* Full-width top image */
+.mobile-design-full {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.mobile-design-full img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border-radius: 15px;
+}
+
+/* Matched image row below */
+.mobile-design-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.mobile-design-row .photo-block {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-design-matched.natural-width {
+    width: auto;
+    flex: 0 0 auto;
+}
+
+.mobile-design-matched.natural-width img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.photo-container.mobile-design-matched {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(233, 69, 96, 0.2), 0 6px 20px rgba(233, 69, 96, 0.2);
+}
+
+.photo-container.mobile-design-matched img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
 .branding {
     width: 100%;
     margin: 0 auto;
@@ -724,60 +816,67 @@ hr {
 /* Slideshow */
 
 .slideshow-section {
-  width: 100%;
-  max-width: 800px;
-  margin: 2rem auto;
-  position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
 }
 
 .slideshow-container {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .slide {
-  display: none;
+    display: none;
 }
 
 
 .slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
 
 .fade {
-  animation: fade 1s ease-in-out;
+    animation: fade 1s ease-in-out;
 }
 
 @keyframes fade {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 12px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  border-radius: 0 8px 8px 0;
-  user-select: none;
-  background-color: rgba(233, 69, 96, 0.5);
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 8px 8px 0;
+    user-select: none;
+    background-color: rgba(233, 69, 96, 0.5);
 }
 
 .next {
-  right: 0;
-  border-radius: 8px 0 0 8px;
+    right: 0;
+    border-radius: 8px 0 0 8px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(233, 69, 96, 0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(233, 69, 96, 0.8);
 }
 
 
@@ -1121,6 +1220,11 @@ hr {
 
     .footer-links {
         justify-content: flex-end;
+    }
+
+    .smaller-p {
+        max-width: 100%;
+        padding-top: 20px;
     }
 
 }
