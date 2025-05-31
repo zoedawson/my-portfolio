@@ -90,9 +90,25 @@ nav {
 .image-hover:hover {
     background-image: url('Images/logo-hover.png');
 }
-.mainnav a:hover{
-    background-color: rgba(0, 0, 0, 0.0);
+
+.mainnav a:hover {
+    background: none !important;
+    color: inherit;
+    text-decoration: none;
 }
+
+.light-logo.image-hover {
+    width: 200px;
+    height: 30px;
+    background-image: url('Images/logo-light.png');
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.light-logo.image-hover:hover {
+    background-image: url('Images/logo-light-hover.png');
+}
+
 
 .navbar {
     display: flex;
