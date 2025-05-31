@@ -1166,8 +1166,18 @@ div.container {
         box-sizing: border-box;
     }
 
+    .cover {
+        padding: 40px 0;
+    }
+
     .cover p {
-        width: 100%;
+        width: 90%;
+    }
+
+
+    .cover h2 {
+        font-size: 8vw;
+        width: 80%;
     }
 
     .research .overview {
