@@ -1068,6 +1068,7 @@ div.container {
     }
 
     .portrait img {
+        max-width: 400px;
         width: 85vw;
         height: auto;
         max-height: 50vh;
