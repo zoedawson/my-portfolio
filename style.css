@@ -930,6 +930,11 @@ div.container {
         display: none;
     }
 
+    #splash img {
+        max-width: 350px;
+        height: auto;
+    }
+
 }
 
 
