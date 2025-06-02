@@ -120,6 +120,7 @@ hr {
 .navbar a,
 .navbar a:visited {
     color: #E94560;
+    border-radius: 10px;
 }
 
 .navbar a:hover {
