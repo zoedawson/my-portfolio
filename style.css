@@ -832,14 +832,15 @@ div.container {
 }
 
 .slideshow-container {
+    width: 100%; 
     position: relative;
     overflow: hidden;
 }
 
 .slide {
     display: none;
+    width: 100%;
 }
-
 
 .slide img {
     width: 100%;
