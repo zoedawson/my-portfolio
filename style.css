@@ -1166,32 +1166,30 @@ footer p {
     }
 
     /* Show menu when hamburger clicked */
-.nav ul.show {
-    transform: translateX(0);
-}
+    .nav ul.show {
+        transform: translateX(0);
+    }
 
     /* Each menu item spacing */
-.nav ul li {
-    list-style: none;
-    margin-bottom: 20px;
-}
+    .nav ul li {
+        list-style: none;
+        margin-bottom: 20px;
+    }
 
-.nav ul li a {
-    text-decoration: none;
-    color: #F0F9FF;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
+    .nav ul li a {
+        text-decoration: none;
+        color: #F0F9FF;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
 
     .cover .section-wrapper {
         flex-direction: column;
-        text-align: center; /* centers text horizontally */
-        align-items: center; /* ensures both image and text are centered */
+        text-align: center;
+        /* centers text horizontally */
+        align-items: center;
+        /* ensures both image and text are centered */
         gap: 1rem;
-    }
-
-    .cover-text-col {
-        width: 100%; /* optional, ensures full width */
     }
 
 
@@ -1248,8 +1246,10 @@ footer p {
     }
 
     .main-card {
+        position: relative;
         flex-direction: column;
         width: 90%;
+        height: 90%;
         margin: 40px auto;
         border-radius: 40px;
         overflow: hidden;
@@ -1264,8 +1264,11 @@ footer p {
     .main-card-image {
         width: 100%;
         height: 100%;
-        border-radius: 40px 40px 0 0;
+        object-fit: cover;
         display: block;
+        filter: brightness(50%);
+        /* darkens the portrait so text is readable */
+        border-radius: 40px 40px 0 0;
     }
 
     .image-col::after {
@@ -1275,30 +1278,49 @@ footer p {
         left: 0;
         width: 100%;
         height: 50%;
-        background: linear-gradient(to top, rgba(240, 249, 255, 1), rgba(240, 249, 255, 0));
-        border-radius: 0;
+        /* adjust how much of the bottom is faded */
+        background: linear-gradient(to top,
+                rgba(240, 249, 255, 0.9),
+                /* mostly opaque at bottom */
+                rgba(240, 249, 255, 0.1),
+                /* almost transparent towards top */
+                rgba(240, 249, 255, 0)
+                /* fully transparent at top */
+            );
         pointer-events: none;
     }
 
     .text-col {
-        padding: 2rem 1.5rem;
-        text-align: left;
-    }
-
-    .text-col [info-buttons] {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        margin-top: 0.5rem;
+        height: 100%;
+        padding: 1.5rem 1.5rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* centers text vertically */
+        background: rgba(255, 255, 255, 0.85);
+        /* semi-transparent overlay */
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        border-radius: 40px 40px 0 0;
     }
 
-    .text-col [info-buttons] button {
-        flex: 1;
-        margin-right: 0;
-        padding: 15px 0;
-        font-size: 16px;
-    }
+.text-col [info-buttons] {
+    display: flex !important;      /* ensure flex applies */
+    flex-direction: row !important; /* row, never column */
+    flex-wrap: nowrap !important;   /* no wrapping */
+    justify-content: center;        /* center horizontally */
+    gap: 10px;                      /* spacing between buttons */
+}
+
+.text-col [info-buttons] button {
+    flex: 0 1 auto;        /* keep natural width, don't force stack */
+    min-width: 120px;      /* optional, prevents buttons shrinking too much */
+    white-space: nowrap;   /* prevents text wrapping */
+}
 
     .social-icons-inline {
         justify-content: center;
@@ -1413,6 +1435,18 @@ footer p {
     .social-icons-inline a img {
         width: 30px;
         height: 30px;
+    }
+
+    .blueborder-top,
+    .blueborder-bottom {
+        height: 50px;
+    }
+
+    .splash .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 160px);
     }
 
 }
