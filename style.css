@@ -7,6 +7,8 @@ body {
     background-color: #F0F9FF;
     color: #3133F7;
     scroll-behavior: smooth;
+        overflow-x: hidden;
+
 }
 
 ::selection {
