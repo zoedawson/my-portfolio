@@ -21,124 +21,170 @@
     <script src="hamburger.js"></script>
     <script src="slideshow.js"></script>
 
-
-    <header class="project-nav project-style">
-        <nav>
-            <div class="mainnav">
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav">
+            <div class="logo">
                 <a href="index.html">
-                    <div><img src="Images/logo-pink.png" alt=""></div>
+                    <img src="" alt="" class="logo-img">
+                    <p>Zoe Dawson</p>
                 </a>
             </div>
-
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="navbar">
-                <li><a href="index.html#projects">My Work</a></li>
-                <li><a href="index.html#aboutme">About Me</a></li>
-                <li> <a href="mailto:zoe_dawson@hotmail.com">Contact Me</a></li>
-                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">LinkedIn</a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="#projects">my work</a></li>
+                <li><a href="#aboutme">about me</a></li>
+                <li><a href="mailto:zoe_dawson@hotmail.com">contact me</a></li>
+                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">linkedin</a></li>
             </ul>
-        </nav>
-
-        <div class="menu-overlay"></div>
-
+        </div>
     </header>
 
-
+    <!-- HERO / COVER -->
     <section class="cover">
-        <p><span class="outline"><b>UX/UI Case Study</b></span>
-        <h2>Project:NEXT</h2>
-        <p><b>An interactive scrollytelling website that illustrates how easily a child can be manipulated by a
-                trafficker through online platforms.</b></p>
+        <div class="section-wrapper">
+            <div class="cover-image-col">
+                <img src="images/projects/projectnext-image-1.png" alt="Themys App Screenshot">
+            </div>
+            <div class="cover-text-col">
+                <p><span class="outline">UX/UI Case Study</span></p>
+                <h1>Project:NEXT</h1>
+                <p class="cover-subtitle">An interactive scrollytelling website that illustrates how easily a child can
+                    be manipulated by a trafficker through online platforms.</p>
+            </div>
+        </div>
     </section>
 
-    <section class="page-padding">
-        <section>
-            <h3 class="center-text">Project Overview</h3>
-            <div class="boxes">
-                <div class="container"><b>My Role</b><br>UI design, UX design, Prototyping, Experimental Design
-                </div>
-                <div class="container"><b>Tools</b><br>Figma, Touchdesigner</div>
-                <div class="container"><b>Timeline</b><br>8 Weeks</div>
-            </div>
+    <hr>
 
-            <div class="problem-solution">
-                <div>
-                    <h3>The Problem</h3>
-                    <p>Since 2021 the New Zealand government hasn't complied to the minimum standards for addressing
-                        human trafficking. New Zealand is in heavy need of more awareness of the issue as most people
-                        don't know this happens on their home turf.</p>
+    <!-- MAIN PROJECT SECTION -->
+    <section class="project-main page-padding">
+        <div class="section-wrapper project-wrapper">
+
+            <!-- Right: Text Content -->
+            <div class="project-text-col">
+
+                <!-- Project Overview -->
+                <div class="project-overview">
+                    <h3>Project Overview</h3>
+
+                    <div class="overview-boxes">
+                        <div class="overview-box">
+                            <b>My Role</b>
+                            <p>UI design, UX design, Prototyping, Experimental Design</p>
+                        </div>
+                        <div class="overview-box">
+                            <b>Tools</b>
+                            <p>Figma, TouchDesigner</p>
+                        </div>
+                        <div class="overview-box">
+                            <b>Timeline</b>
+                            <p>8 Weeks</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3>The Solution</h3>
-                    <p>This project uses narrative design to raise awareness about child exploitation by illustrating a
-                        fictional story from a child's perspective. It aims to foster empathy, highlight online grooming
-                        tactics, and promote understanding, while respectfully avoiding the use of real victim stories.
-                    </p>
+
+                <!-- Problem & Solution -->
+                <div class="problem-solution">
+                    <div class="problem">
+                        <h3>The Problem</h3>
+                        <p>Since 2021 the New Zealand government hasn't complied with the minimum standards for
+                            addressing human trafficking. New Zealand is in heavy need of more awareness of the issue as
+                            most people don't know this happens on their home turf.</p>
+                    </div>
+
+                    <div class="solution">
+                        <h3>The Solution</h3>
+                        <p>This project uses narrative design to raise awareness about child exploitation by
+                            illustrating a
+                            fictional story from a child's perspective. It aims to foster empathy, highlight online
+                            grooming tactics, and promote understanding, while respectfully avoiding the use of real
+                            victim stories.</p>
+                    </div>
                 </div>
             </div>
-        </section>
-        <hr>
+        </div>
+    </section>
+    <hr>
 
-        <section class="slideshow-section">
+    <!-- PROJECT SLIDESHOW -->
+    <section class="slideshow-section">
+        <div class="section-wrapper">
             <div class="slideshow-container">
                 <div class="slide fade">
-                    <img src="Images/projectnext-image-1.png" alt="Slide 1">
+                    <img src="Images/projects/projectnext-image-1.png" alt="Slide 1">
                 </div>
                 <div class="slide fade">
-                    <img src="Images/projectnext-image-2.png" alt="Slide 2">
+                    <img src="Images/projects/projectnext-image-2.png" alt="Slide 2">
                 </div>
                 <div class="slide fade">
-                    <img src="Images/projectnext-image-3.png" alt="Slide 3">
+                    <img src="Images/projects/projectnext-image-3.png" alt="Slide 3">
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a>
             </div>
-        </section>
-        <hr>
+        </div>
+    </section>
+    <hr>
 
+    <!-- RESEARCH -->
+    <section class="research page-padding">
+        <div class="section-wrapper">
 
-        <section class="research">
             <h3 class="center-text">Research and Insights</h3>
+
             <div class="overview">
                 <div class="text-list">
                     <h3>Key Findings</h3>
                     <ul>
-                        <li>Since 2021 the New Zealand government hasn't complied to the minimum standards for addressing human trafficking </li>
-                        <li>In 2023, over 29,440 reports of online child exploitation were received by NZ authorities.</li>
+                        <li>Since 2021 the New Zealand government hasn't complied with the minimum standards for
+                            addressing human trafficking.</li>
+                        <li>In 2023, over 29,440 reports of online child exploitation were received by NZ authorities.
+                        </li>
                     </ul>
                 </div>
+
                 <div class="photo-container">
-                    <img src="Images/projectnext-persona.png" alt="">
-                    <p>Primary user persona: Emma, 38, Parent with 12 year old daughter </p>
+                    <img src="Images/projects/projectnext-persona.png" alt="User Persona">
+                    <p>Primary user persona: Emma, 38, Parent with 12-year-old daughter</p>
                 </div>
             </div>
-        </section>
-        <hr>
+        </div>
+    </section>
+    <hr>
 
-        <section>
+    <!-- STORY-DRAFTING -->
+    <section class="page-padding">
+        <div class="section-wrapper">
             <h3 class="center-text">Story-drafting</h3>
-            <div>
-                <div>
-                    <div class="photo-container full-image">
-                        <img src="Images/projectnext-storydraft.png" alt="Full size image">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr>
 
-    <!-- Needs updating
-        <section>
+            <div class="photo-container full-image">
+                <img src="Images/projects/projectnext-storydraft.png" alt="Full size image">
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- REFLECTIONS -->
+    <section class="page-padding reflections">
+        <div class="section-wrapper">
+
             <h3 class="center-text">Reflections & Learnings</h3>
-            <div class="problem-solution">
-                <div class="text-list">
+
+            <div class="reflections-boxes">
+                <div class="reflections-box">
                     <h3>What I learned</h3>
                     <ul>
                         <li>Learned how to integrate TouchDesigner with MediaPipe to track hand movements and trigger
@@ -149,7 +195,8 @@
                             team setting.</li>
                     </ul>
                 </div>
-                <div class="text-list">
+
+                <div class="reflections-box">
                     <h3>What Could Improve</h3>
                     <ul>
                         <li>The interaction outcome could be developed further to look and feel closer to the final
@@ -159,33 +206,31 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </section>  -->
-
-    <footer>
-        <nav class="footer-nav pink-footer">
-            <p>© 2025 Zoe Dawson. All rights reserved.</p>
-            <ul class="footer-links">
-                <li>
-                    <a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank"
-                        rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="32"
-                            height="32" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="LinkedIn">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="32"
-                            height="32" />
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <footer>
+        <p>© 2026 Zoe Dawson. All rights reserved.</p>
+        <div class="social-icons-inline">
+            <a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank" rel="noopener">
+                <img src="https://static.cdnlogo.com/logos/i/92/instagram.svg" alt="Instagram" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank" rel="noopener">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"
+                    width="32" height="32">
+            </a>
+        </div>
     </footer>
 
-    <script src="gradient.js"></script>
+        <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav ul');
+            const hamburger = document.querySelector('.hamburger');
+            menu.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+
 </body>
 
 </html>

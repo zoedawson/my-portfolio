@@ -5,200 +5,197 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Zoe Dawson Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&family=The+Girl+Next+Door&display=swap"
-        rel="stylesheet" />
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/jig0ugj.css">
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-    <canvas id="lavaLampCanvas"></canvas>
-    <script src="hamburger.js"></script>
-
-
     <header>
-        <nav>
-            <div class="mainnav">
+        <div class="nav">
+            <div class="logo">
                 <a href="index.html">
-                    <div><img src="Images/logo.png" alt=""></div>
+                    <img src="" alt="" class="logo-img">
+                    <p>Zoe Dawson</p>
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="#projects">my work</a></li>
+                <li><a href="#aboutme">about me</a></li>
+                <li><a href="mailto:zoe_dawson@hotmail.com">contact me</a></li>
+                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">linkedin</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="splash">
+        <!-- Top border -->
+        <div class="blueborder-top"></div>
+
+        <!-- Splash content -->
+        <div class="wrapper">
+            <div class="main-card">
+                <div class="image-col">
+                    <img class="main-card-image" src="images/portrait.png" alt="">
+                </div>
+                <div class="text-col">
+                    <h1>Hello! <br> I'm Zoe, lets click.</h1>
+                    <p>
+                        As an interactive designer, I explore ideas, experiment with skills,
+                        and craft engaging experiences.
+                    </p>
+                    <div class="info-buttons">
+                        <a href="#projects"><button>view work</button></a>
+                        <a href="#aboutme"><button class="pink-button">about me</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom border -->
+        <div class="blueborder-bottom"></div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h1 class="projects-title">- my work -</h1>
+        <div class="project-card-container">
+            <div class="project-card">
+                <a href="themys.html">
+                    <div class="project-image"><img src="images/projects/themys-image-1.png" alt=""></div>
+                    <div class="project-text">
+                        <ul>
+                            <li>App Design</li>
+                            <li>Branding</li>
+                            <li>UX/UI</li>
+                        </ul>
+                        <h2>Themys</h2>
+                        <p>A product comparison app that helps users avoid gender-based price discrimination.</p>
+                    </div>
                 </a>
             </div>
 
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="navbar">
-                <li><a href="#projects">My Work</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li> <a href="mailto:zoe_dawson@hotmail.com">Contact Me</a></li>
-                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">LinkedIn</a></li>
-            </ul>
-        </nav>
-
-        <div class="menu-overlay"></div>
-
-    </header>
-
-    <hr />
-
-    <section id="splash">
-        <div class="splash-content">
-            <div class="aboutmetxt">
-                <img src="images/stars.png" alt="Scribbled Star" width="120" height="120" class="corner-img top-left" />
-
-                <div class="headline-wrapper">
-                    <h2>MEET THE DESIGNER</h2>
-                    <img src="images/underline.png" alt="Underline" class="underline" />
-                </div>
-
-                <h1 class="purplecolor">ZOE</h1>
-                <h1>DAWSON</h1>
-                <p>
-                    I'm an interactive designer fuelled by curiosity and a passion for learning. I'm always on the
-                    lookout
-                    for fresh perspectives and fun ways to bring ideas to life.
-                </p>
+            <div class="project-card">
+                <a href="projectnext.html">
+                    <div class="project-image"><img src="images/projects/projectnext-image-1.png" alt=""></div>
+                    <div class="project-text">
+                        <ul>
+                            <li>Branding</li>
+                            <li>UX/UI</li>
+                            <li>Storytelling</li>
+                        </ul>
+                        <h2>Project:NEXT</h2>
+                        <p>An interactive scrollytelling website that illustrates how easily a child can be manipulated
+                            by a trafficker through online platforms.</p>
+                    </div>
+                </a>
             </div>
 
-            <div class="portrait">
-                <img src="images/portrait.png" alt="Portrait photo of Zoe Dawson" />
+            <div class="project-card">
+                <a href="escaperoom.html">
+                    <div class="project-image"><img src="images/projects/eroom-experiement.png" alt=""></div>
+                    <div class="project-text">
+                        <ul>
+                            <li>Web Design</li>
+                            <li>Interactive Media</li>
+                            <li>Group Work</li>
+                        </ul>
+                        <h2>Putapaiarehe - Escape Room</h2>
+                        <p>An interactive escape room experience designed to educate rangatahi about the benefits and
+                            potential of 5G technology, developed in partnership with Spark.</p>
+                    </div>
+                </a>
             </div>
         </div>
-
-        <a class="projectarrow bouncy-arrow" href="#projects">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="#E94560" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-            <span>Projects</span>
-        </a>
     </section>
 
 
-
-    <section class="projects" id="projects">
-        <h3 class="projecttitle">Projects</h3>
-
-        <a href="themys.html">
-            <div class="project-item">
-                <h3>Themys</h3>
-                <ul>
-                    <li>App Design</li>
-                    <li>Branding</li>
-                    <li>UX/UI</li>
-                </ul>
-                <div class="preview-overlay">
-                    <img src="Images/themys-image-1.png" alt="Themys Preview" />
-                </div>
-            </div>
-        </a>
-
-        <a href="projectnext.html">
-            <div class="project-item">
-                <h3>Project:NEXT</h3>
-                <ul>
-                    <li>Web Design</li>
-                    <li>Branding</li>
-                    <li>UX/UI</li>
-                    <li>Storytelling</li>
-                </ul>
-                <div class="preview-overlay">
-                    <img src="Images/projectnext-image-1.png" alt="Unnamed Preview" />
-                </div>
-            </div>
-        </a>
-
-        <a href="escaperoom.html">
-            <div class="project-item">
-                <h3>Putapaiarehe - Escape Room</h3>
-                <ul>
-                    <li>Web Design</li>
-                    <li>UX/UI</li>
-                    <li>Interactive Media</li>
-                    <li>Group Work</li>
-                </ul>
-                <div class="preview-overlay">
-                    <img src="Images/eroom-experiement.png" alt="Putapaiarehe Escape Room Preview" />
-                </div>
-            </div>
-        </a>
-    </section>
-
+    <div class="blueborder-top"></div>
 
 
     <section class="aboutme" id="aboutme">
-        <div class="aboutme-text">
-            <h3>About Me</h3>
-            <p>Hi, I'm Zoe — an interactive designer fuelled by <b>curiosity</b>, <b>collaboration</b>, and <b>spirals
-                    of inspo</b>.</p>
-            <p>I'm drawn to work that <b>tells stories, shifts perspectives, and invites people in.</b> Whether I'm
-                designing <b>UX
-                    flows</b>, crafting <b>immersive experiences</b>, or experimenting with <b>new tools</b>, I'm always
-                exploring how design can
-                feel <b>thoughtful, emotional, and a little unexpected</b>.</p>
-            <p>Still figuring it all out? Absolutely. But that's the fun part. I bring <b>energy</b>, <b>empathy</b>,
-                and a <b>love for
-                    learning</b> to everything I do.</p>
 
-            <br />
+        <div class="aboutme-content">
 
-            <h3 class="pinktxt">Skills</h3>
-            <ul class="pinktxt skills">
-                <li>UI/UX Design</li>
-                <li>Interaction Design</li>
-                <li>Wireframing</li>
-                <li>User Research</li>
-                <li>Visual Design</li>
-                <li>Illustration</li>
-                <li>Figma</li>
-                <li>Photoshop</li>
-                <li>Illustrator</li>
-                <li>Design Thinking</li>
-                <li>Interactive Storytelling</li>
-                <li>HTML/CSS</li>
-            </ul>
-        </div>
 
-        <div class="aboutme-image">
-            <img src="Images/discover.png" alt="Discover Graphic" />
+            <div class="aboutme-text-and-skills">
+                <div class="aboutme-textblock">
+                    <h1 class="aboutme-heading">About Me</h1>
+                    <p>
+                        Hi, I'm <b>Zoe</b> — an interactive designer fuelled by
+                        <b>curiosity</b>, <b>collaboration</b>, and <b>spirals of inspo</b>.
+                    </p>
+                    <p>
+                        I'm drawn to work that <b>tells stories, shifts perspectives, and invites people in.</b>
+                        Whether I'm designing <b>UX flows</b>, crafting <b>immersive experiences</b>, or
+                        experimenting with
+                        <b>new tools</b>, I'm always exploring how design can feel
+                        <b>thoughtful, emotional, and a little unexpected</b>.
+                    </p>
+                    <p>
+                        Still figuring it all out? Absolutely. But that's the fun part.
+                        I bring <b>energy</b>, <b>empathy</b>, and a <b>love for learning</b> to everything I do.
+                    </p>
+                </div>
+
+                <div class="aboutme-skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>UI/UX Design</li>
+                        <li>Interaction Design</li>
+                        <li>Wireframing</li>
+                        <li>User Research</li>
+                        <li>Visual Design</li>
+                        <li>Illustration</li>
+                        <li>Figma</li>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>Design Thinking</li>
+                        <li>Interactive Storytelling</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="aboutme-illustration">
+                <img src="images/discover.png" alt="Illustration of Zoe exploring with magnifying glass" />
+            </div>
         </div>
     </section>
 
     <footer>
-        <hr>
-        <nav class="footer-nav">
-            <p>© 2025 Zoe Dawson. All rights reserved.</p>
-            <ul class="footer-links">
-                <li>
-                    <a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank"
-                        rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="32"
-                            height="32" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="LinkedIn">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="32"
-                            height="32" />
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <p>© 2026 Zoe Dawson. All rights reserved.</p>
+        <div class="social-icons-inline">
+            <a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank" rel="noopener">
+                <img src="https://static.cdnlogo.com/logos/i/92/instagram.svg" alt="Instagram" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank" rel="noopener">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"
+                    width="32" height="32">
+            </a>
+        </div>
     </footer>
 
 
-    <script src="gradient.js"></script>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav ul');
+            const hamburger = document.querySelector('.hamburger');
+            menu.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+
 </body>
 
 </html>

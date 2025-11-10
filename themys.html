@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Zoe Dawson Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
     <!-- Google Fonts -->
     <link
@@ -14,150 +14,208 @@
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="projects.css" />
 </head>
 
 <body class="project-page">
 
-    <script src="hamburger.js"></script>
-    <script src="slideshow.js"></script>
-
-
-    <header class="project-nav project-style">
-        <nav>
-            <div class="mainnav">
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav">
+            <div class="logo">
                 <a href="index.html">
-                    <div><img src="Images/logo-pink.png" alt=""></div>
+                    <img src="" alt="" class="logo-img">
+                    <p>Zoe Dawson</p>
                 </a>
             </div>
-
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="navbar">
-                <li><a href="index.html#projects">My Work</a></li>
-                <li><a href="index.html#aboutme">About Me</a></li>
-                <li><a href="mailto:zoe_dawson@hotmail.com">Contact Me</a></li>
-                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">LinkedIn</a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="#projects">my work</a></li>
+                <li><a href="#aboutme">about me</a></li>
+                <li><a href="mailto:zoe_dawson@hotmail.com">contact me</a></li>
+                <li><a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank">instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank">linkedin</a></li>
             </ul>
-        </nav>
-
-        <div class="menu-overlay"></div>
-
+        </div>
     </header>
 
+    <script src="hamburger.js"></script>
 
+    <!-- HERO / COVER -->
     <section class="cover">
-        <p><span class="outline"><b>UX/UI Case Study</b></span></p>
-        <h2>Themys</h2>
-        <p><b>A product comparison app that helps users avoid gender-based price discrimination</b></p>
+        <div class="section-wrapper">
+            <div class="cover-image-col">
+                <img src="images/projects/themys-image-1.png" alt="Themys App Screenshot">
+            </div>
+
+            <div class="cover-text-col">
+                <p><span class="outline">UX/UI Case Study</span></p>
+                <h1>Themys</h1>
+                <p class="cover-subtitle">A product comparison app that helps users avoid gender-based price
+                    discrimination.</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- MAIN PROJECT SECTION -->
+    <section class="project-main page-padding">
+        <div class="section-wrapper project-wrapper">
+
+            <!-- Right: Text Content -->
+            <div class="project-text-col">
+
+                <!-- Project Overview -->
+                <div class="project-overview">
+                    <h3>Project Overview</h3>
+
+                    <div class="overview-boxes">
+                        <div class="overview-box">
+                            <b>My Role</b>
+                            <p>UX research, UI design, prototyping, coding, branding, illustration</p>
+                        </div>
+                        <div class="overview-box">
+                            <b>Tools</b>
+                            <p>Figma, Illustrator, VS Code</p>
+                        </div>
+                        <div class="overview-box">
+                            <b>Timeline</b>
+                            <p>8 Weeks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem & Solution -->
+                <div class="problem-solution">
+                    <div class="problem">
+                        <h3>The Problem</h3>
+                        <p>Gender-based pricing affects millions of consumers daily, with women paying up to
+                            13% more for similar products. Existing comparison tools do not account for gendered
+                            marketing or help users identify price discrimination patterns.</p>
+                    </div>
+
+                    <div class="solution">
+                        <h3>The Solution</h3>
+                        <p>Themys empowers users to make informed purchasing decisions by comparing products
+                            across gender categories, highlighting price disparities, and providing alternative
+                            options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="page-padding">
-        <section>
-            <h3 class="center-text">Project Overview</h3>
-            <div class="boxes">
-                <div class="container"><b>My Role</b><br>UX research, UI design, prototyping, coding, branding,
-                    illustration
-                </div>
-                <div class="container"><b>Tools</b><br>Figma, Illustrator, VS Code</div>
-                <div class="container"><b>Timeline</b><br>8 Weeks</div>
-            </div>
-            <div class="problem-solution">
-                <div>
-                    <h3>The Problem</h3>
-                    <p>Gender-based pricing affects millions of consumers daily, with women paying up to 13% more for
-                        similar products. Existing comparison tools don't account for gendered marketing or help users
-                        identify price discrimination patterns.</p>
-                </div>
-                <div>
-                    <h3>The Solution</h3>
-                    <p>Themys empowers users to make informed purchasing decisions by comparing products across gender
-                        categories, highlighting price disparities, and providing alternative options to combat
-                        discriminatory pricing.</p>
-                </div>
-            </div>
-        </section>
-        <hr>
+    <hr>
 
-        <section class="slideshow-section">
+    <!-- PROJECT SLIDESHOW -->
+    <section class="slideshow-section">
+        <div class="section-wrapper">
             <div class="slideshow-container">
+
                 <div class="slide fade">
-                    <img src="Images/themys-image-1.png" alt="Slide 1">
+                    <img src="images/projects/themys-image-1.png" alt="Slide 1">
                 </div>
                 <div class="slide fade">
-                    <img src="Images/themys-image-2.png" alt="Slide 2">
+                    <img src="images/projects/themys-image-2.png" alt="Slide 2">
                 </div>
                 <div class="slide fade">
-                    <img src="Images/themys-image-3.png" alt="Slide 3">
+                    <img src="images/projects/themys-image-3.png" alt="Slide 3">
                 </div>
                 <div class="slide fade">
-                    <img src="Images/themys-image-4.png" alt="Slide 4">
+                    <img src="images/projects/themys-image-4.png" alt="Slide 4">
                 </div>
                 <div class="slide fade">
-                    <img src="Images/themys-image-5.png" alt="Slide 5">
+                    <img src="images/projects/themys-image-5.png" alt="Slide 5">
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a>
+
             </div>
-        </section>
-        <hr>
+        </div>
+    </section>
 
+    <hr>
 
-        <section class="research">
+    <!-- RESEARCH -->
+    <section class="research page-padding">
+        <div class="section-wrapper">
+
             <h3 class="center-text">Research and Insights</h3>
+
             <div class="overview">
                 <div class="text-list">
                     <h3>Key Findings</h3>
                     <ul>
-                        <li>78% of users were unaware of gender-based pricing in everyday products</li>
-                        <li>Users wanted transparency and alternatives when price discrimination was identified</li>
-                        <li>Mobile-first approach was crucial for in-store comparison shopping</li>
-                        <li>Trust and data accuracy were primary concerns </li>
+                        <li>78% of users were unaware of gender-based pricing.</li>
+                        <li>Users wanted transparency and alternatives.</li>
+                        <li>Mobile-first design was essential for in-store use.</li>
+                        <li>Trust and data accuracy were major concerns.</li>
                     </ul>
                 </div>
+
                 <div class="photo-container">
-                    <img src="Images/themys-persona.png" alt="">
+                    <img src="images/projects/themys-persona.png" alt="User Persona">
                     <p>Primary user persona: Eliza, 28, Budget-conscious professional</p>
                 </div>
             </div>
-        </section>
-        <hr>
 
-        <section>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- WIREFRAMES & PROTOTYPING -->
+    <section class="page-padding">
+        <div class="section-wrapper">
+
             <h3 class="center-text">Wireframes & Prototyping</h3>
+
             <div class="dual-photo">
                 <div class="photo-block">
-                    <div class="photo-container">
-                        <img src="Images/themys-paper.png" alt="">
+                    <div class="photo-container"><img src="images/projects/themys-paper.png" alt="Paper Wireframes">
                     </div>
                     <p>Initial concept sketches focusing on core user flows</p>
                 </div>
+
                 <div class="photo-block">
-                    <div class="photo-container">
-                        <img src="Images/themys-lofi.png" alt="">
+                    <div class="photo-container"><img src="images/projects/themys-lofi.png" alt="Low-fi Prototype">
                     </div>
-                    <p>Refined designs with final visual hierarchy and interactions</p>
+                    <p>Refined designs with final hierarchy and interactions</p>
                 </div>
             </div>
-        </section>
 
-        <hr>
+        </div>
+    </section>
 
-        <section class="branding">
+    <hr>
+
+    <!-- BRAND & UI DESIGN -->
+    <section class="branding page-padding">
+        <div class="section-wrapper">
             <h3 class="center-text">Brand & UI Design</h3>
-            <div class="overview">
-                <div>
+
+            <div class="branding-content">
+                <div class="branding-text">
                     <h3>Design Philosophy</h3>
                     <p>
-                        The visual identity emphasizes inclusivity and trust through a gender-neutral colour palette,
+                        The visual identity emphasises inclusivity and trust through a gender-neutral colour palette,
                         clean typography, and accessible design patterns. The purple accent represents empowerment while
                         maintaining professional credibility.
                     </p>
+
                     <p><b>Colour Palette</b></p>
                     <div class="square">
                         <div class="color-box" style="background-color: #CDE300;"></div>
@@ -166,78 +224,89 @@
                         <div class="color-box" style="background-color: #FB4429;"></div>
                         <div class="color-box" style="background-color: #FFACAB;"></div>
                     </div>
+
                     <p><b>Typography</b></p>
                     <div class="fonts">
-                        <p style="font-family:gitan-latin, sans-serif; font-size: 24px; font-weight: 900;">Gitan Latin -
+                        <p style="font-family:gitan-latin, sans-serif; font-size: 24px; font-weight: 900;">Gitan Latin –
                             Headings</p>
-                        <p style="font-family:gitan-latin, sans-serif; font-size: 16px; font-weight: 600;">Gitan Latin -
-                            Subeadings</p>
-                        <p style="font-family:gitan-latin, sans-serif; font-size: 16px;">Gitan Latin - Body</p>
+                        <p style="font-family:gitan-latin, sans-serif; font-size: 16px; font-weight: 600;">Gitan Latin –
+                            Subheadings</p>
+                        <p style="font-family:gitan-latin, sans-serif; font-size: 16px;">Gitan Latin – Body</p>
                     </div>
                 </div>
-                <div class="photo-container">
-                    <img src="Images/themys-logo.png" alt="">
+
+                <div class="branding-image">
+                    <img src="images/projects/themys-logo.png" alt="Logo and variations">
                     <p>Logo and variations</p>
                 </div>
             </div>
-            <div class="photo-container full-width">
-                <img src="Images/themys-stylescape.png" alt="Stylescapes">
-                <p>Stylescape</p>
-            </div>
+        </div>
 
-        </section>
-        <hr>
+        <div class="stylescape-fullwidth">
+            <img src="images/projects/themys-stylescape.png" alt="Stylescape">
+        </div>
 
-        <section>
-            <h3 class="center-text">Reflections & Learnings</h3>
-            <div class="problem-solution">
-                <div>
-                    <div class="text-list">
-                        <h3>What I learned</h3>
-                        <ul>
-                            <li>Importance of inclusive design</li>
-                            <li>Building a coded prototype helped me think more like a developer when structuring
-                                designs</li>
-                            <li>Figma prototyping to emulate realistic user flows</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-list">
-                    <h3>What Could Improve</h3>
-                    <ul>
-                        <li>More diverse user testing groups</li>
-                        <li>Testing throughout the entire process</li>
-                        <li>Community driven database</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
+        <div class="section-wrapper">
+            <p class="stylescape-caption">Stylescape</p>
+        </div>
     </section>
 
-    <footer>
-        <nav class="footer-nav pink-footer">
-            <p>© 2025 Zoe Dawson. All rights reserved.</p>
-            <ul class="footer-links">
-                <li>
-                    <a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank"
-                        rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="32"
-                            height="32" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="LinkedIn">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="32"
-                            height="32" />
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <hr>
+
+    <!-- REFLECTIONS -->
+    <section class="page-padding reflections">
+        <div class="section-wrapper">
+
+            <h3 class="center-text">Reflections & Learnings</h3>
+
+            <div class="reflections-boxes">
+
+                <div class="reflections-box">
+                    <h3>What I learned</h3>
+                    <ul>
+                        <li>Importance of inclusive design</li>
+                        <li>Building a coded prototype improved development thinking</li>
+                        <li>Using Figma prototyping to create realistic flows</li>
+                    </ul>
+                </div>
+
+                <div class="reflections-box">
+                    <h3>What Could Improve</h3>
+                    <ul>
+                        <li>More diverse testing groups</li>
+                        <li>Testing throughout the entire process</li>
+                        <li>Community-driven database</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+        <footer>
+        <p>© 2026 Zoe Dawson. All rights reserved.</p>
+        <div class="social-icons-inline">
+            <a href="https://www.instagram.com/zoe.creates.things/?hl=en" target="_blank" rel="noopener">
+                <img src="https://static.cdnlogo.com/logos/i/92/instagram.svg" alt="Instagram" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/zoe-dawson01/" target="_blank" rel="noopener">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"
+                    width="32" height="32">
+            </a>
+        </div>
     </footer>
 
-    <script src="gradient.js"></script>
+    <script src="slideshow.js"></script>
+        <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav ul');
+            const hamburger = document.querySelector('.hamburger');
+            menu.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+
 </body>
 
 </html>
