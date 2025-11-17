@@ -13,9 +13,7 @@ body {
 
 ::selection {
     background-color: #3133F7;
-    /* your blue */
     color: #F0F9FF;
-    /* your white text */
 }
 
 /* ---------------- NAV ---------------- */
