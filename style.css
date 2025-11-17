@@ -7,7 +7,7 @@ body {
     background-color: #F0F9FF;
     color: #3133F7;
     scroll-behavior: smooth;
-        overflow-x: hidden;
+    overflow-x: hidden;
 
 }
 
@@ -673,7 +673,6 @@ button:active {
 /* ----- Section padding & layout ----- */
 .page-padding {
     padding: 4rem 0;
-    /* removed side padding for perfect alignment */
 }
 
 .center-text {
@@ -697,6 +696,22 @@ button:active {
     padding-bottom: 2rem;
 }
 
+.prototype {
+    background-color: #3133F7;
+    color: #F0F9FF;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    padding: 8px 20px;
+    text-decoration: none;
+    transform: translateY(0);
+}
+
+.prototype:hover {
+    box-shadow: 0 0 25px -6px #3133F7;
+    transform: scale(1.04);
+}
+
 /* ================================
    RESEARCH & INSIGHTS
 ================================ */
@@ -705,7 +720,6 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* center whole section */
 }
 
 .research h3.center-text {
@@ -718,9 +732,7 @@ button:active {
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
-    /* center the two boxes */
     align-items: center;
-    /* align photo + text on same row */
     width: 100%;
 }
 
@@ -1308,19 +1320,27 @@ footer p {
         border-radius: 40px 40px 0 0;
     }
 
-.text-col [info-buttons] {
-    display: flex !important;      /* ensure flex applies */
-    flex-direction: row !important; /* row, never column */
-    flex-wrap: nowrap !important;   /* no wrapping */
-    justify-content: center;        /* center horizontally */
-    gap: 10px;                      /* spacing between buttons */
-}
+    .text-col [info-buttons] {
+        display: flex !important;
+        /* ensure flex applies */
+        flex-direction: row !important;
+        /* row, never column */
+        flex-wrap: nowrap !important;
+        /* no wrapping */
+        justify-content: center;
+        /* center horizontally */
+        gap: 10px;
+        /* spacing between buttons */
+    }
 
-.text-col [info-buttons] button {
-    flex: 0 1 auto;        /* keep natural width, don't force stack */
-    min-width: 120px;      /* optional, prevents buttons shrinking too much */
-    white-space: nowrap;   /* prevents text wrapping */
-}
+    .text-col [info-buttons] button {
+        flex: 0 1 auto;
+        /* keep natural width, don't force stack */
+        min-width: 120px;
+        /* optional, prevents buttons shrinking too much */
+        white-space: nowrap;
+        /* prevents text wrapping */
+    }
 
     .social-icons-inline {
         justify-content: center;
@@ -1447,6 +1467,18 @@ footer p {
         justify-content: center;
         align-items: center;
         height: calc(100vh - 160px);
+    }
+
+    .cover-text-col h1 {
+        text-align: center;
+    }
+
+    .cover-text-col p {
+        margin-bottom: 40px;
+    }
+
+    .prototype {
+        margin-top: 30px;
     }
 
 }
