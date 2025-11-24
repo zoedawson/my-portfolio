@@ -38,23 +38,19 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    /* removes underline */
 }
 
 /* Logo image */
 .logo-img {
     height: 40px;
-    /* adjust as needed */
     width: auto;
     margin-right: 10px;
-    /* spacing between logo and name */
 }
 
 /* Logo text */
 .logo a p {
     margin: 0;
     font-size: 1.2rem;
-    /* adjust size as needed */
     color: white;
     font-weight: bold;
 }
@@ -731,6 +727,13 @@ button:active {
     margin-bottom: 2.5rem;
 }
 
+.sub-text{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+
 .research .overview {
     display: flex;
     gap: 2rem;
@@ -745,11 +748,19 @@ button:active {
     padding-left: 1.5rem;
 }
 
+.text-list ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
 .research .text-list li {
     margin-bottom: 0.75rem;
 }
 
-
+.curavideo {
+    display: block;
+    margin: 0 auto;
+}
 
 /* TEXT BOX */
 .research .text-list {
@@ -936,11 +947,8 @@ button:active {
 
 .photo-container.full-image {
     width: 100%;
-    /* spans full width of section-wrapper */
     max-width: 100%;
-    /* override any previous max-width */
     margin: 2rem 0;
-    /* spacing between stacked images */
     text-align: center;
 }
 
@@ -948,7 +956,6 @@ button:active {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    /* optional, keeps style consistent */
     box-shadow: 0 0 25px -6px #3133F7;
     display: block;
 }
@@ -1202,9 +1209,7 @@ footer p {
     .cover .section-wrapper {
         flex-direction: column;
         text-align: center;
-        /* centers text horizontally */
         align-items: center;
-        /* ensures both image and text are centered */
         gap: 1rem;
     }
 
@@ -1422,31 +1427,22 @@ footer p {
     .research .text-list,
     .research .photo-container {
         flex: unset;
-        /* remove fixed flex */
         width: 100%;
-        /* full width of parent wrapper */
         max-width: 90%;
-        /* same as section-wrapper padding */
         box-sizing: border-box;
-        /* include padding in width */
         margin: 0 auto 1rem auto;
-        /* center horizontally with margin-bottom */
     }
 
     /* Optional: make image on top */
     .research .photo-container {
 
         margin-bottom: 1rem;
-        /* spacing below image */
     }
 
     footer {
         flex-direction: column;
-        /* stack vertically */
         justify-content: center;
-        /* center items horizontally */
         align-items: center;
-        /* center items vertically */
         text-align: center;
         padding: 20px;
         gap: 10px;
